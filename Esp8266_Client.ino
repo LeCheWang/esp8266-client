@@ -25,7 +25,7 @@ const char* ssid = "PhongPhuong"; //Enter SSID
 const char* password = "12345678900"; //Enter Password
 const char* websockets_server_host = "wss://realtime.gorokiapp.com"; //Enter server adress
 const uint16_t websockets_server_port = 443; // Enter server port
-const char* ID_AREA="642d3cd0435ca36eda05177d";
+const char* ID_AREA="6455ede79c15beda76d5391c";
 
 using namespace websockets;
 
@@ -109,96 +109,96 @@ void onMessage(){
     Serial.println(message.data());
 
       //led 0
-      if (message.data() == "642d3cd0435ca36eda05177d;0;0"){
+      if (message.data() == String(ID_AREA) + ";0;0"){
         Serial.println(0);
         digitalWrite(0, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("0: OFF");
-      }else if (message.data() == "642d3cd0435ca36eda05177d;0;1"){
+      }else if (message.data() == String(ID_AREA) + ";0;1"){
         Serial.println(1);
         digitalWrite(0, HIGH);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("0: ON");
-      }else if (message.data() == "642d3cd0435ca36eda05177d;2;0"){  //led 2
+      }else if (message.data() == String(ID_AREA) + ";2;0"){  //led 2
         Serial.println(0);
         digitalWrite(2, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("2: OFF");
-      }else if (message.data() == "642d3cd0435ca36eda05177d;2;1"){
+      }else if (message.data() == String(ID_AREA) + ";2;1"){
         Serial.println(1);
         digitalWrite(2, HIGH);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("2: ON");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;4;0"){ //led 4
+      } else if (message.data() == String(ID_AREA) + ";4;0"){ //led 4
         Serial.println(0);
         digitalWrite(4, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("4: OFF");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;4;1"){
+      } else if (message.data() == String(ID_AREA) + ";4;1"){
         Serial.println(1);
         digitalWrite(4, HIGH);
         lcd.setCursor(0, 1);
         lcd.print("4: ON");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;5;0"){ //led 5
+      } else if (message.data() == String(ID_AREA) + ";5;0"){ //led 5
         Serial.println(0);
         digitalWrite(5, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("5: OFF");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;5;1"){
+      } else if (message.data() == String(ID_AREA) + ";5;1"){
         Serial.println(1);
         digitalWrite(5, HIGH);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("5: ON");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;12;0"){ //led 12
+      } else if (message.data() == String(ID_AREA) + ";12;0"){ //led 12
         Serial.println(0);
         digitalWrite(12, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("12: OFF");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;12;1"){ 
+      } else if (message.data() == String(ID_AREA) + ";12;1"){ 
         Serial.println(1);
         digitalWrite(12, HIGH);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("12: ON");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;14;0"){ //led 14
+      } else if (message.data() == String(ID_AREA) + ";14;0"){ //led 14
         Serial.println(0);
         digitalWrite(14, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("14: OFF");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;14;1"){
+      } else if (message.data() == String(ID_AREA) + ";14;1"){
         Serial.println(1);
         digitalWrite(14, HIGH);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("14: ON");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;16;0"){ //led 16
+      } else if (message.data() == String(ID_AREA) + ";16;0"){ //led 16
         Serial.println(0);
         digitalWrite(16, LOW);
         lcd.setCursor(0, 1);
         lcd.print("              ");
         lcd.setCursor(0, 1);
         lcd.print("16: OFF");
-      } else if (message.data() == "642d3cd0435ca36eda05177d;16;1"){
+      } else if (message.data() == String(ID_AREA) + ";16;1"){
         Serial.println(1);
         digitalWrite(16, HIGH);
         lcd.setCursor(0, 1);
